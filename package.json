@@ -1,0 +1,17 @@
+{
+  "name": "bora-radar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node preparar.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:local": "wrangler d1 migrations apply bora-radar-db --local",
+    "db:remote": "wrangler d1 migrations apply bora-radar-db --remote",
+    "test": "node scripts/core.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.163.0"
+  }
+}
